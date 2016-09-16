@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+if [[ -z "$JEKYLL_GITHUB_TOKEN" ]]; then
+    echo "You should generate a GitHub token, otherwise you may see"
+    echo "lots of errors when rendering pages."
+    echo "See: http://mycyberuniverse.com/web/fixing-jekyll-github-metadata-warning.html"
+    echo ""
+fi
+
+bundle exec jekyll serve

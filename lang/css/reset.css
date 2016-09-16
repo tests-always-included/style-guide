@@ -1,0 +1,40 @@
+/* Specificity: 0, 0, 0, 0 */
+* {
+    border: 0 solid #000000;
+    margin: 0;
+    outline: none;
+    padding: 0;
+    zoom: 1;
+    position: relative;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Specificity: 0, 0, 0, 1 */
+html {
+    height: 100%;
+}
+
+/* Specificity: 0, 0, 0, 1 */
+body {
+    /* Setting the body to have a normalized font-size of 10 pixels since most
+     * browsers use 16px as their default font size.
+     */
+    font-size: 10px;
+    height: 100%;
+}
+
+/* Specificity: 0, 0, 1, 1 */
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    cursor: pointer;
+}
+
+/* Specificity: 0, 0, 1, 1 */
+input[type="button"]:disabled,
+input[type="reset"]:disabled,
+input[type="submit"]:disabled {
+    cursor: default;
+}

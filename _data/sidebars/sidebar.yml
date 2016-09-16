@@ -1,0 +1,81 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+    -
+        title: sidebar
+        product: Style Guide
+        version: 
+        folders:
+        -
+            title: Overview
+            output: web, pdf
+            folderitems:
+                -
+                    title: Welcome
+                    url: /
+                    output: web, pdf
+                    type: homepage
+                -
+                    title: Style Guide Goals
+                    url: /general/goals/
+                    output: web, pdf
+                -
+                    title: General Rules
+                    url: /general/
+                    output: web, pdf
+        -
+            title: Languages
+            output: web, pdf
+            folderitems:
+                -
+                    title: CSS / LESS / SASS
+                    url: /lang/css/
+                    output: web, pdf
+                -
+                    title: HTML
+                    url: /lang/html/
+                    output: web, pdf
+                -
+                    title: JavaScript
+                    url: /lang/js/
+                    output: web, pdf
+                -
+                    title: Makefile
+                    url: /lang/makefile/
+                    output: web, pdf
+                -
+                    title: Markdown
+                    url: /lang/md/
+                    output: web, pdf
+                -
+                    title: PHP
+                    url: /lang/php/
+                    output: web, pdf
+                -
+                    title: Python
+                    url: /lang/py/
+                    output: web, pdf
+                -
+                    title: Shell Scripting
+                    url: /lang/sh/
+                    output: web, pdf
+                -
+                    title: YAML
+                    url: /lang/yaml/
+                    output: web, pdf
+        -
+            title: Special Topics
+            output: web, pdf
+            folderitems:
+                -
+                    title: Databases
+                    url: /topic/db/
+                    output: web, pdf
+                -
+                    title: Git
+                    url: /topic/git/
+                    output: web, pdf
+                -
+                    title: Testing
+                    url: /topic/tests/
+                    output: web, pdf

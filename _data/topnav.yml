@@ -1,0 +1,57 @@
+## Topnav single links
+## if you want to list an external url, use external_url instead of url. the theme will apply a different link base.
+topnav:
+    -
+        title: Topnav
+        items:
+            -
+                title: General Rules
+                url: /general/
+
+#Topnav dropdowns
+topnav_dropdowns:
+    -
+        title: Topnav dropdowns
+        folders:
+            -
+                title: Languages
+                folderitems:
+                    -
+                        title: CSS / LESS / SASS
+                        url: /lang/css/
+                    -
+                        title: HTML
+                        url: /lang/html/
+                    -
+                        title: JavaScript
+                        url: /lang/js/
+                    -
+                        title: Makefile
+                        url: /lang/makefile/
+                    -
+                        title: Markdown
+                        url: /lang/md/
+                    -
+                        title: PHP
+                        url: /lang/php/
+                    -
+                        title: Python
+                        url: /lang/py/
+                    -
+                        title: Shell Scripts
+                        url: /lang/sh/
+                    -
+                        title: YAML
+                        url: /lang/yaml/
+            -
+                title: Topics
+                folderitems:
+                    -
+                        title: Databases
+                        url: /topic/db/
+                    -
+                        title: Git
+                        url: /topic/git/
+                    -
+                        title: Testing
+                        url: /topic/testing/
