@@ -3,7 +3,7 @@ Search all page metadata for a link anchor property
 {% endcomment %}
 {% for p in site.pages %}
 {% if p.pageid %}
-[{{p.pageid}}]: {{p.url}}
+[{{p.pageid}}]: {{site.baseurl}}{{p.url}}
 {% endif %}
 {% endfor %}
 
