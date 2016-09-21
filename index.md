@@ -15,18 +15,21 @@ When you get to specific languages and techniques, we have individual guides.
 Languages
 ---------
 
-* [CSS / LESS/ SASS][lang-css]
+* [CSS / LESS / SASS][lang-css]
 * [HTML][lang-html]
 * [JavaScript][lang-js]
+* [Makefile][lang-makefile]
 * [Markdown][lang-md]
 * [PHP][lang-php]
 * [Python][lang-py]
 * [Shell Scripts][lang-sh]
+* [YAML][lang-yaml]
 
 
 Topics
 ------
 
+* [Databases][topic-db]
 * [Git Commits, Branches, Tags][topic-git]
 * [Test Quality][topic-tests]
 
