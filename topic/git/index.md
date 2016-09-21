@@ -9,7 +9,7 @@ These rules extend and override the [general rules][general-rules].
 Branching and Tagging
 ---------------------
 
-Use a [git-flow](http://nvie.com/posts/a-successful-git-branching-model/) branching model.  `master` is the current, live production system.  `develop` is a well-tested version that is aleays ready for immediate release.  There will be other feature branches forked from `develop` to fix bugs or add features.  A critical bug would be fixed by forking `master`, fixing the bug, merging back to `master` (and redeploying), then merging `master` into `develop`.
+Use a [git-flow](http://nvie.com/posts/a-successful-git-branching-model/) branching model.  `master` is the current, live production system.  `develop` is a well-tested version that is always ready for immediate release.  There will be other feature branches forked from `develop` to fix bugs or add features.  A critical bug would be fixed by forking `master`, fixing the bug, merging back to `master` (and redeploying), then merging `master` into `develop`.
 
 The feature branches and bugfix branches are expected to be maintained or removed.
 
