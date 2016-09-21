@@ -8,9 +8,10 @@ pageid: welcome
 
 In order to maintain a high level of quality, the [Tests-Always-Included] team adheres to this style guide.  It helps keep our code consistent and has been designed to train your eyes to automatically spot problems.  Like all style guides, it is heavily biased, but the rules have been growing slowly and deliberately in the hopes that we will raise the bar and produce better results.
 
-To get started, you should first check out the [reasons to have a style guide][purpose] and get familiar with the [style guide's goals][goals].  After that, most of the rules are embodied within the [general rules][general-rules].
+To get started, you should first get familiar with the [style guide's goals][goals].  After that, most of the rules are embodied within the [general rules][general-rules].
 
 When you get to specific languages and techniques, we have individual guides.
+
 
 Languages
 ---------
