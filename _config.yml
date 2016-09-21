@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: Style Guide for Tests-Always-Included
 email: tests-always-included@rumkin.com
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "/style-guide" # the subpath of your site, e.g. /blog or an empty string
 # twitter_username: jekyllrb
 github_username:  tests-always-included
 
