@@ -127,8 +127,8 @@ Example
     }
 
     .sidebar {
-        float: right;
         background: $sidebarBackgroundColor;
+        float: right;
     }
 
 
