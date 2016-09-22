@@ -11,7 +11,7 @@ If you are writing Angular code, adhere to the [Angular 2 Style Guide] or the [A
 Tooling
 -------
 
-If you are writing CSS by hand, use a lint checker.  We recommend [ESLint].  We also have a custom [.eslintrc.yaml](eslintrc.yaml) and [.eslintignore](eslintignore.txt) for general purpose JavaScript utilizing ES6.  When writing code for Angular, you may prefer this [.eslintrc.yaml](eslintrc-angular.yaml) for Angular.  The rules are quite strict intentionally.  We aim to catch as many problems as possible early in the development lifecycle.
+Use a lint checker.  We recommend [ESLint].  We also have a custom [.eslintrc.yaml](eslintrc.yaml) and [.eslintignore](eslintignore.txt) for general purpose JavaScript utilizing ES6.  When writing code for Angular, you may prefer this [.eslintrc.yaml](eslintrc-angular.yaml) for Angular.  The rules are quite strict intentionally.  We aim to catch as many problems as possible early in the development lifecycle.
 
 
 Files and Directories
@@ -55,7 +55,7 @@ Use `//` style comments for single lines and `/* comment */` style for multiple 
 
 Use `/* eslint some-feature:"off" */` style comments for eslint flags.  Disable the check for as few lines of code as possible.
 
-Use `/* global someThing */` style after the file's JSDoc header for defining global variables for eslint.  However, this should not be necessary because we should be using factory methods and injecting dependencies.
+Use `/* global someThing */` style after the file's JSDoc header for defining global variables for eslint.  However, this should not be necessary because we should be using factory methods and injecting dependencies.  A notable exception is when working with JavaScript that operates in a browser and 3rd party libraries are exposed only through global variables.
 
 Comments wrap at 80 characters unless there's a compelling reason not to do this, such as when using a very long URL or embedding a code example.
 
@@ -103,9 +103,9 @@ We like parenthesis and braces.  All control structures, like `if` statements, r
 Specific Constructs
 -------------------
 
-Property names should be unquoted unless it is necessary to wrap it in quotes.
+Property names should be unquoted unless it is necessary to wrap them in quotes.
 
-Nothing that's displayable to the user should be sourced from JavaScript.  It should come from an HTML template, a JSON file from a server or API calls.  Provide codes, not text.
+Nothing that's displayable to the user should be sourced from JavaScript.  The wording should come from an HTML template, a JSON file from a server or API calls.  Provide codes, not text strings.
 
 Use double-quoted strings.
 
@@ -408,8 +408,9 @@ This example is quite long and includes many comments to help illustrate the rul
 
                 lastClickData = {};
 
-                // Normally `copyProperty` would be an inline arrow function.
-                // It is a standalone function here for illustrative purposes.
+                /* Normally `copyProperty` would be an inline arrow function.
+                 * It is a standalone function here for illustrative purposes.
+                 */
                 [
                     'mouseX',
                     'mouseY'
@@ -424,10 +425,11 @@ This example is quite long and includes many comments to help illustrate the rul
             /**
              * Run a test, display a message.
              *
-             * The method's added to the prototype this way for cleanliness, but
-             * using Object.create() is also an options.  The return value is "this"
-             * so we are not specifying a type - it is possible that the context is
-             * anything and we're returning whatever the context is.
+             * The method's added to the prototype this way for cleanliness,
+             * but using Object.create() is also an option.  The return value
+             * is "this" so we are not specifying a type - it is possible that
+             * the context is anything and we're returning whatever the context
+             * is.
              *
              * @param {string} [message] Show this message via an alert
              * @return this
