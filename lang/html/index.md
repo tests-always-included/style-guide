@@ -17,7 +17,7 @@ Use [Atomic CSS] when writing [CSS][lang-css], then use Atomizer to read the HTM
 Capitalization
 --------------
 
-Everything should be lowercase within tags.  This includes the name of the element, attributes and attribute values where appropriate.  Capitalization is allowed for class names specifically for Atomic CSS.
+Everything within tags should be lowercase.  This includes the name of the element, attributes and attribute values where appropriate.  Capitalization is allowed for class names specifically for Atomic CSS.
 
 Text that should be entirely uppercase should be transformed via [CSS][lang-css], do NOT JUST TYPE IN CAPITAL LETTERS.
 
