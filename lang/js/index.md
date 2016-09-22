@@ -443,8 +443,9 @@ This example is quite long and includes many comments to help illustrate the rul
             }
         };
 
-        // Export to UMD or the global object - standard boilerplate.
-        // This works as an example, but one should use Fid-UMD instead.
+        /* Export to UMD or the global object - standard boilerplate.
+         * This works as an example, but one should use Fid-UMD instead.
+         */
         if (module && module.exports) {
             module.exports = FakeTestClass;
         } else {
