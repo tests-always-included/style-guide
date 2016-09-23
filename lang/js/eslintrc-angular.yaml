@@ -6,7 +6,8 @@ env:
     jasmine: true
 extends:
     - angular
-    - eslint:recommended
+    -
+        eslint: recommended
 plugins:
     - jasmine
 globals:
