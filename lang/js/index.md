@@ -29,6 +29,8 @@ Variables, Naming and Capitalization
 
 Do not use global variables.
 
+There shall be a single `var` line per function.  Optionally, there may be a `var` line near the top of a file for module-constrained "global" variables.  There will be a single `const` declaration for constants used in a module.
+
 Variables, methods and property names will use `camelCase` style formatting.  Only constructors will use a leading capital letter, such as `Date` and `EventEmitter`.  Underscores are prohibited.
 
 Functions are named only if they are not supposed to be overridden.  Anonymous functions do not need a name and shouldn't get one and should either be passed directly or assigned to a variable.
@@ -77,7 +79,7 @@ Indentation and Whitespace
 
 The [general rules][general-rules] has most of these rules.
 
-Opening braces and brackets are attached to the code on the left.  Indentation always increases with braces and arrays.  Spaces before and after most operators.  Blank line above comments, two blank lines above JSDoc comments.  No whitespace required at the very beginning nor end of a block of code.  Newlines after commas in array literals and object literals.  No space between a function name and its arguments.  Include a space after operators.
+Opening braces and brackets are attached to the code on the left.  Indentation always increases with braces and arrays.  Spaces before and after most operators.  Blank line above comments, two blank lines above JSDoc comments.  No whitespace required at the very beginning nor end of a block of code.  Newlines after commas in a list of constants, array literals and object literals.  No space between a function name and its arguments.  Include a space after operators.
 
 ESLint forces `case` statements and the `default` case in switches to be un-indented (just that line).  There must be a blank line after `break;` as well.
 
