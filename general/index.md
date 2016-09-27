@@ -74,8 +74,12 @@ Logical blocks will be offset by one blank line.  This is to call out that you a
             Whitespace before to separate it from other code.
             No whitespace afterwards because it is the last thing
             in the parent block.
+
+            return some-value;
         }
     }
+
+As shown in the above example, things like `return`, `exit`, and `throw` should be offset by a line as well.  They break typical program flow and the whitespace helps to call out that fact.
 
 
 Comments
