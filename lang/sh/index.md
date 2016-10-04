@@ -27,7 +27,7 @@ Bash-specific constructs shall be preferred, such as using `[[` instead of `[` o
 
 Lines will be preferred to stop at 80 characters when possible, but longer lines are acceptable.  For instance, one may take a very long command and split it up so each argument is on a separate line for readability.  When you do split a line, indent the subsequent lines with 4 characters.
 
-Try to not nest commands together in order to make your code more readable.
+Don't nest commands together if possible.  This makes your code more readable.
 
     #!/usr/bin/env bash
 
@@ -113,7 +113,7 @@ Variable names will use camel case as well.  Use of uppercase names is restricte
 Coding Techniques and Problem Avoidance
 ---------------------------------------
 
-Always code and enable a strict mode.  Typically you can do this with `wickStrictMode` when you source `/usr/local/lib/wick-infect`.  If that is not available, you can use the same [strict mode](https://github.com/tests-always-included/wick/blob/master/doc/bash-strict-mode.md) that Wick uses.
+Always code and enable a [strict mode](https://github.com/tests-always-included/wick/blob/master/doc/bash-strict-mode.md) or perhaps one like [Wick](https://github.com/tests-always-included/wick/blob/master/lib/wick-strict-mode).
 
 Functions will list all of their variables as `local` to avoid unintentional consequences.  If accessing external variables, use `declare` to silence ShellCheck's warnings.
 
@@ -171,15 +171,28 @@ Errors, warning and debug messages go to stderr.  Only expected output and infor
     # Load library functions
     . /usr/local/lib/wick-infect
 
+    anotherFunction() {
+        # This should fail
+        ls -l somefile-that-does-not-exist
+
+        # This should not happen but "set -e" is not honored inside conditions.
+        echo "This should never execute."
+    }
+
     elementary() {
         local result
 
+        # Enable strict mode.  An equivalent is
+        #   set -eEo pipefail
         wickStrictMode
-        echo "This is the inner workings."
+        echo "These are the inner workings."
         echo "Args: $@"
 
-        # This is a workaround because "set -e" is not honored in conditions
-        wickStrictRun result ls -l someFile
+        # This is a workaround because "set -e" is not honored in conditions,
+        # such as when using if, while, !, ||, and others.  If not operating
+        # in a Wick environment, an equivalent would be to temporarily set +eE
+        # and run the command, and finally enable set -eE again.
+        wickStrictRun result anotherFunction
 
         if [[ "$result" -ne 0 ]]; then
             echo "someFile does not exist"
