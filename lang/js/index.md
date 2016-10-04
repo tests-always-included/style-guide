@@ -129,6 +129,8 @@ For easier testing and much more sanity, follow a dependency injection pattern a
 
 Always use semicolons.  ESLint helps find mistakes where they were omitted.
 
+Prefer duck typing in library functions unless you truly care about using specific types of instances.  In tests, it is often simpler to perform instance checking.
+
 
 Ordering
 --------
