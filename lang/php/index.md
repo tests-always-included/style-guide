@@ -17,7 +17,7 @@ Files and Folders
 
 Do not include a path when using `require()`, `require_once()`, `include()`, or `include_once()`. The include path should be set up appropriately so that the cascading of includes will happen correctly.  Prefer `require_once()` unless you must `include()`.  The other two shouldn't be used.
 
-Files containing classes should be named `SomeClass.class.php` (hyphenated and all lowercase).  This makes it really easy for autoloaders.
+Files containing classes should be named `SomeClass.class.php` (hyphenated and Pascal case).  This makes it really easy for autoloaders.
 
 Files containing only functions should be named after the things it contains, such as `text-transformations.php`.
 
@@ -55,7 +55,7 @@ Attempt to not use compound statements. `if (($a = doThingie($x, $y)) == false)`
 Comments
 --------
 
-Use PHPDoc to describe the file, which should either have related functions or a single class.  For each function, include another PHPDoc.  Describe the inputs and return value.
+Use [PHPDoc] to describe the file, which should either have related functions or a single class.  For each function, include another doc block.  Describe the inputs and return value.
 
 
 Specific Constructs
@@ -126,5 +126,7 @@ Enable all warnings in PHP.  Watch the log and eliminate problems.
 
 Use single-quoted strings.  You can't accidentally put in variables and they evaluate quicker.
 
+
+[PHPDoc]: https://www.phpdoc.org/
 
 {% include links.html %}
