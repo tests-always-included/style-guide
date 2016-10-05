@@ -1,0 +1,93 @@
+#!/usr/bin/env bash
+
+# Converts a list of words into a single line
+asSingleLine() {
+    tr "\n" " " | sed "s/ $//"
+}
+
+# Generates a list of keywords
+listKeywords() {
+    removeLinks | \
+    unlinkText | \
+    removeMarkup | \
+    makeWordList | \
+    removeNonWords | \
+    asSingleLine
+}
+
+# Changes the content into a list of words.  Rip off punctuation from the
+# left and right, make things lowercase, sort, and make the list unique.
+makeWordList() {
+    local patt
+
+    patt="[-_,\"\`:;()'\\\$?*#\!@]*"
+    tr "A-Z \t\"()<>{}/=." "a-z\n" | sed -e "s/^$patt\\|$patt\$//g" | sort | uniq
+}
+
+# Removes link definitions in Markdown
+removeLinks() {
+    sed '/^\[[^]]*\]:/d'
+}
+
+# Remove entries that do not have word-like properties.  Requires a letter
+# or a number in the line for the line to be kept
+removeNonWords() {
+    grep '[a-z0-9]'
+}
+
+# Removes template markup in content
+removeMarkup() {
+    sed '/{%.*%}/d'
+}
+
+# Removes links in all forms, preseving the displayable content.
+# [word], [word][dest] and [word](dest)
+unlinkText() {
+    sed 's/\[\([^]]*\)\]\(\[[^]]*\]\|([^)]*)\)\?/\1/g'
+}
+
+updateKeywords() {
+    if [[ ! -f "$1" ]]; then
+        echo "File does not exist: $1" >&2
+        
+        return
+    fi
+
+    frontmatter=$(sed '1{/^---$/!q};1d;/^---$/,$d' "$1")
+    body=$(sed '1{/^---$/!q};1,/^---$/d' "$1")
+
+    if [[ -z "$frontmatter" ]]; then
+        echo "Missing frontmatter: $1" >&2
+
+        return
+    fi
+
+    if [[ -z "$body" ]]; then
+        echo "Missing body: $1" >&2
+        
+        return
+    fi
+
+    keywords=$(echo "$body" | listKeywords)
+
+    (
+        echo "---"
+        echo "$frontmatter" | grep -v "^keywords:"
+        echo "keywords: $keywords"
+        echo "---"
+        echo "$body"
+    ) > "$1"
+
+    echo "Updated:  $1"
+}
+
+
+if [[ "$#" -eq 0 ]]; then
+    echo "Specify markdown files to update."
+
+    exit
+fi
+
+for file in "$@"; do
+    updateKeywords "$file"
+done

@@ -1,6 +1,7 @@
 ---
 title: Style Guide for Markdown
 pageid: lang-md
+keywords: 1 2 3 80-character a above after all also an and another are as at attempt attention avoid back bash be before beginning bin blank block blocks bulleted by can check code did directly document documentation documents echo enter example except extend fake fences flavored focus follow formatting four from general github grammar had have heading headings here html illustration in including indentation indented inserting instead is item it's length letters level limit line lines list lists long looks markdown markup match matched means miscellaneous most must my new newline newlines normal not notable now of on one only or other others over override paragraph paragraphs pay placed press resorting rule rules same sample script section see separate separates shell should single some spaces spell start subheading subheadings sublist sub-subheading symbols text that the there these thing things third this title to try two typical under use want we weirder when whitespace with without work you your
 ---
 
 These rules extend and override the [general rules][general-rules].
