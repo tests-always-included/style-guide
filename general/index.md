@@ -15,7 +15,7 @@ Life is better when tools do things for you.  You should use lint checkers and s
 
 When possible, use [EditorConfig](http://editorconfig.org/).  Many of the whitespace rules can be handled by a single config file.  When creating a file, make sure that you flag it as the root of the project.  We have a sample [.editorconfig](editorconfig.txt) file that works well with many types of projects.
 
-[Git][topic-git] is our version control system of choice.  As such, you probably want to use our [.gitignore](gitignore.txt) file and use that as a base.  Remember that directories should end in `/` if you only want to apply the rule to a folder and a leading `/` means you only want something at the root of the repository.
+[Git][topic-git] is our version control system of choice.
 
 
 Files, Encoding, Formats

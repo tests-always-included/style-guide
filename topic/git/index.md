@@ -7,6 +7,12 @@ keywords: a add added always and are as back based be being branch branches bran
 These rules extend and override the [general rules][general-rules].
 
 
+Ignoring Files
+--------------
+
+Use our [.gitignore](gitignore.txt) file as a base.  Remember that directories should end in `/` if you only want to apply the rule to a folder and a leading `/` means you only want something at the root of the repository.
+
+
 Branching and Tagging
 ---------------------
 
