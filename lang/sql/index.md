@@ -10,8 +10,9 @@ Keywords
 All keywords should be uppercase.
 
     SELECT COUNT(*)
-    WHERE DATEDIFF(NOW(), someTable.timeStamp)
-    ORDER BY ASC
+    FROM someTable
+    WHERE DATEDIFF(NOW(), timeStamp)
+    ORDER BY someField ASC
 
 
 Indentation and Whitespace
@@ -23,12 +24,12 @@ Clauses should be separated by newlines.
     FROM someTable
     ORDER BY someField DESC
 
-When using "SELECT" on multiple columns, place the columns on the same line.
+When using `SELECT` on multiple columns, place the columns on the same line.
 
     SELECT this, that, and, the, other
     FROM someTable
 
-"AND" should be dropped onto a newline and given an additional indentation of four spaces relative to the clause it's a part of.
+`AND` should be dropped onto a newline and given an additional indentation of four spaces relative to the clause it's a part of.
 
     SELECT *
     FROM someTable
@@ -36,7 +37,7 @@ When using "SELECT" on multiple columns, place the columns on the same line.
         AND column2 = "someValue"
         AND column3 = false
 
-IN, AS, and OR should all be placed on the same line as the clause they are a part of.
+`IN`, `AS`, and `OR` should all be placed on the same line as the clause they are a part of.
 
     SELECT *
     FROM someTable AS st
@@ -57,5 +58,5 @@ The above rules apply for all subqueries as well. Subqueries should also be star
         FROM someTable
         LIMIT 3
     )
-    ORDER BY DESC
+    ORDER BY someField DESC
 
