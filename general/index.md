@@ -80,7 +80,7 @@ Logical blocks will be offset by one blank line.  This is to call out that you a
         }
     }
 
-As shown in the above example, things like `return`, `exit`, and `throw` should be offset by a line as well.  They break typical program flow and the whitespace helps to call out that fact. Also note that, the second `while` used under the 1st line does not have a blank space.
+As shown in the above example, things like `return`, `exit`, and `throw` should be offset by a line as well.  They break typical program flow and the whitespace helps to call out that fact. Also note that, the second `while` used under the 1st line and the last line of `if` codeblock does not have a blank space.
 
 
 Comments
