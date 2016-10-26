@@ -61,7 +61,7 @@ When braces are used in a language, those braces will be on the same line as the
 
 Logical blocks will be offset by one blank line.  This is to call out that you are increasing the cyclomatic complexity.  The extra line will be omitted when the logical block is the first or last thing inside of another block.
 
-    fakeFunction2() {
+    while(condition) {
         while (condition) {
             no whitespace before this block because it is the
             first thing in the function
@@ -80,7 +80,7 @@ Logical blocks will be offset by one blank line.  This is to call out that you a
         }
     }
 
-As shown in the above example, things like `return`, `exit`, and `throw` should be offset by a line as well.  They break typical program flow and the whitespace helps to call out that fact.
+As shown in the above example, things like `return`, `exit`, and `throw` should be offset by a line as well.  They break typical program flow and the whitespace helps to call out that fact. Also note that, the second `while` used under the 1st line does not have a blank space.
 
 
 Comments
