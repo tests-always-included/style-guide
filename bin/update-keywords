@@ -53,8 +53,8 @@ updateKeywords() {
         return
     fi
 
-    frontmatter=$(sed '/^---$/,$d' "$1")
-    body=$(sed '1,/^---$/d' "$1")
+    frontmatter=$(sed '1{/^---$/!q};1d;/^---$/,$d' "$1")
+    body=$(sed '1{/^---$/!q};1,/^---$/d' "$1")
 
     if [[ -z "$frontmatter" ]]; then
         echo "Missing frontmatter: $1" >&2
