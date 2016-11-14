@@ -1,7 +1,7 @@
 ---
 title: Git Commits, Branches, Tags
 pageid: topic-git
-keywords: a add added always and are as back based be being branch branches branching bug bugfix bugs by central critical current dealing describe develop development eg environments expected extend feature features fix fixed fixing for forked forking from general get git-flow higher hyphens if immediate into is issue issue-1337 letters live lowercase maintained master merging model name names need new npm numbered numbers off one or other override production published publishing pushed ready redeploying reflect related release releasing removed repositories repository rules semantic should software such system tagged tagging tags than that the then there these to use version versioning we well-tested when will with would
+keywords: a add added always and apply are as at back base based be being branch branches branching bug bugfix bugs by central critical current dealing describe develop development directories eg end environments expected extend feature features file files fix fixed fixing folder for forked forking from general get git-flow gitignore higher hyphens if ignoring immediate in into is issue issue-1337 leading letters live lowercase maintained master means merging model name names need new npm numbered numbers of off one only or other our override production published publishing pushed ready redeploying reflect related release releasing remember removed repositories repository root rule rules semantic should software something such system tagged tagging tags than that the then there these to use version versioning want we well-tested when will with would you
 ---
 
 These rules extend and override the [general rules][general-rules].

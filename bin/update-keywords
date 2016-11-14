@@ -47,20 +47,26 @@ unlinkText() {
 }
 
 updateKeywords() {
+    local body frontmatter keywords
+
     if [[ ! -f "$1" ]]; then
         echo "File does not exist: $1" >&2
         
         return
     fi
 
-    frontmatter=$(sed '1{/^---$/!q};1d;/^---$/,$d' "$1")
-    body=$(sed '1{/^---$/!q};1,/^---$/d' "$1")
+    frontmatter=""
+    body=$(cat -- "$1")
 
-    if [[ -z "$frontmatter" ]]; then
+    if [[ "$body" != "---"$'\n'*$'\n'---$'\n'* ]]; then
         echo "Missing frontmatter: $1" >&2
 
         return
     fi
+
+    body=${body:4}
+    frontmatter=${body%%$'\n'---$'\n'*}
+    body=${body#*$'\n'---$'\n'}
 
     if [[ -z "$body" ]]; then
         echo "Missing body: $1" >&2

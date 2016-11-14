@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-cd "${0%/*}"/..
+cd "${0%/*}"/.. || exit
 
 find . -name index.md -exec bin/update-keywords {} \;

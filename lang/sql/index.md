@@ -1,14 +1,7 @@
 ---
 title: Style Guide for SQL
 pageid: lang-sql
-keywords: 3 a above additional all also an and apply are as asc be by clause
-clauses code column column1 column2 column3 columns count datediff db desc
-dropped embedded examplecolumn false for four from given id in indentation
-indented it's keywords limit line multiple newline newlines now of offset on
-onto or order other part place placed queries query relative rest return rules
-same select separated should somealias somefield sometable somevalue space
-spaces st started subqueries that the they this timestamp to true uppercase
-using well when where whitespace
+keywords: 3 a above additional all also an and apply are as asc be by clause clauses code column column1 column2 column3 columns count datediff db desc dropped embedded examplecolumn false for four from given id in indentation indented it's keywords limit line multiple newline newlines now of offset on onto or order other part place placed queries query relative rest return rules same select separated should somealias somefield sometable somevalue space spaces st started subqueries that the they this timestamp to true uppercase using well when where whitespace
 ---
 
 
@@ -67,4 +60,3 @@ The above rules apply for all subqueries as well. Subqueries should also be star
         LIMIT 3
     )
     ORDER BY someField DESC
-
