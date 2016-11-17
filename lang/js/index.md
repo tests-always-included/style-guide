@@ -385,6 +385,7 @@ This example is quite long and includes many comments to help illustrate the rul
                 this.callCount = 0;
             },
 
+
             /**
              * Sample event handler
              *
@@ -393,6 +394,7 @@ This example is quite long and includes many comments to help illustrate the rul
              */
             onClick(event, data) {
                 var lastClickData;
+
 
                 /**
                  * Copy a property from incoming data into the lastClickData
@@ -408,6 +410,7 @@ This example is quite long and includes many comments to help illustrate the rul
                         lastClickData[name] = data[name];
                     }
                 }
+
 
                 if (typeof data === "object" && data.callCount) {
                     this.callCount = +data.callCount || 0;
@@ -427,7 +430,8 @@ This example is quite long and includes many comments to help illustrate the rul
                     instance: this
                 };
                 this.lastClickData = lastClickData;
-            }
+            },
+
 
             /**
              * Run a test, display a message.
@@ -449,6 +453,7 @@ This example is quite long and includes many comments to help illustrate the rul
                 this.callCount += 1;
             }
         };
+
 
         /* Export to UMD or the global object - standard boilerplate.
          * This works as an example, but one should use Fid-UMD instead.
