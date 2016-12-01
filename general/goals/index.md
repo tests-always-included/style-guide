@@ -17,7 +17,7 @@ One big complaint about software is that the developers need months to understan
 
 Following a coding standard can provide hints on how to use functions and variables.  For instance, you could be writing JavaScript and use the function `getNameAsync()` and you'd know it would return a Promise because all functions that return a Promise should end in `Async`.  The variable `SomethingSpecial` is a class due to the leading capital letter, where as `anotherExample` is not a class (though it could be either a base data type or an instance).
 
-Documentation helps unravel mysterious parts.  Even after only a few weeks, developers do not remember the tricks they employed to solve a problem.  Adding documentation for these complex areas is a necessity and can help you anyone who has to maintain the code in the future.
+Documentation helps unravel mysterious parts.  Even after only a few weeks, developers do not remember the tricks they employed to solve a problem.  Adding documentation for these complex areas is a necessity and can help you or anyone who has to maintain the code in the future.
 
 When the syntax starts to look ugly, take that as an indication that there's too much going on or that the code needs to be reworked.  When you feel like listing variables on multiple lines or splitting up your chained calls, perhaps it is better to consider an alternative.  Too many arguments to one function?  The functionality could be split into separate routines or you could define an object that helps control the data being passed.  Very long chained calls?  Repeated assignments can help split the line up and make it easier to read for the less experienced people on the team.
 
