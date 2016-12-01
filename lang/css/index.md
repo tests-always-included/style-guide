@@ -110,7 +110,7 @@ Example
      * designs.  These settings should be used throughout the site.
      */
     $legalTextColor: black;
-	$primaryTextColor: #343434;
+    $primaryTextColor: #343434;
     $sidebarBackgroundColor: #D0D0D0;
 
 `theme.less`:
