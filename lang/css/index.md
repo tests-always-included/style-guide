@@ -30,7 +30,7 @@ There should be no need to have multiple selectors on a single line.  When you d
     body, html {
         zoom: 1
     }
-    
+
     /* Correct */
     body,
     html {
@@ -91,6 +91,8 @@ Indentation and Whitespace
 
 Properties will have no space before the colon and exactly one space after.  The property's value will always be followed by a semicolon.
 
+There will be one new line between styles, while there will be two lines separating style sections.  Style sections will be preceeded with a comment denoting what the section is for.
+
 
 Reset vs Normalize
 ------------------
@@ -108,6 +110,7 @@ Example
      * designs.  These settings should be used throughout the site.
      */
     $legalTextColor: black;
+	$primaryTextColor: #343434;
     $sidebarBackgroundColor: #D0D0D0;
 
 `theme.less`:
@@ -130,6 +133,12 @@ Example
     .sidebar {
         background: $sidebarBackgroundColor;
         float: right;
+    }
+
+
+    /* Another block of styles */
+    .main {
+        color: $primaryTextColor;
     }
 
 
