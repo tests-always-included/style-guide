@@ -48,12 +48,6 @@ It is typical, when using jQuery, to name your jQuery-ized variables with a `$` 
         // Work here
     }
 
-    // Alphabetically Incorrect
-    function someFunction () {
-        var bus, Car, car, $car;
-
-        // Work here
-    }
 
 Comments
 --------

@@ -115,7 +115,6 @@ When performing alphabetization, ignore symbols and ignore case.  That means the
 
     global $monday, Moo, moose, _mop;
 
-Specific languages can override general ordering of variables, please refer to the language you are using to see if there are overriding rules.
 
 Specific Constructs
 -------------------
