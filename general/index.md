@@ -95,7 +95,7 @@ Comments will be on the line before code.  Comments will be offset from any code
 
         // This comment has whitespace before it.
         do something else that is tricky
-        
+
         return "this also has a blank line before it"
     }
 
@@ -113,7 +113,7 @@ When there are no other dependencies on other functions, individual functions in
 
 When performing alphabetization, ignore symbols and ignore case.  That means these elements are sorted correctly:
 
-    var $monday, Moo, moose, _mop;
+    global $monday, Moo, moose, _mop;
 
 
 Specific Constructs

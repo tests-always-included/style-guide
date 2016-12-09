@@ -36,9 +36,17 @@ Variables, methods and property names will use `camelCase` style formatting.  On
 
 Functions are named only if they are not supposed to be overridden.  Anonymous functions do not need a name and shouldn't get one and should either be passed directly or assigned to a variable.
 
-When declaring multiple variables, they should be declared alphabetically and any symbols at the front of variable names should be ignored. Where there is a conflict between two matching variable names, capitalised variable names should be listed first; think carefully before you name two variables similarly because that typically indicates a problem.
+When declaring multiple variables, they should be declared alphabetically and any symbols at the front of variable names should come before ones without. This is enforced with the ESLint configuration we use. Where there is a conflict between two matching variable names, capitalized variable names should be listed first; think carefully before you name two variables similarly because that typically indicates a problem.
 
 It is typical, when using jQuery, to name your jQuery-ized variables with a `$` in front, like `$elements = $('input');`.
+
+
+    // Alphabetically Correct
+    function someFunction () {
+        var $car, bus, Car, car;
+
+        // Work here
+    }
 
 
 Comments
@@ -147,8 +155,8 @@ File contents are ordered according to the type of content that is within the fi
      * This file is an example module.
      */
     "use strict";
-    
-    
+
+
     /**
      * Change a string into uppercase.
      *
@@ -158,8 +166,8 @@ File contents are ordered according to the type of content that is within the fi
     function upper(input) {
         return input.toUpperCase();
     }
-    
-    
+
+
     module.exports = upper;
 
 1.  JSDoc comment explaining the scope of the code.
