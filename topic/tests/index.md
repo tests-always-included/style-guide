@@ -508,4 +508,22 @@ Sometimes a directive may call an internal function that performs specific actio
 With the above example, we could combine the data sets with this example to provide even shorter code, but it may be undesirable to do so.  For instance, with this code structure one can assert additional effects happened or mix in several `beforeEach()` calls.  Remember that the goal is maintainable, clean and self-describing code.
 
 
+Functional Testing
+------------------
+
+Functional testing is the art of testing how your website or api works from the eye of a user, or at least with everything put together. It is very similar to unit testing in the way of how tests are laid out, but there are some things to watch out for.
+
+First, we want to load the page or refresh each time a test is started. This is to make sure we carry over any data from one test to another. For instance, if data was set to be used in the `session` we want to make sure it gets cleared out before loading the next test. This can usually be done in the `afterEach()` call using `window.sessionStorage.clear();`.
+
+Try to think what a user would do. Try running through the scenario you are setting up and pay attention to what you do. Forms can be a little touchy, as some people will click the button to submit the form, while others will tab to the submit button and hit enter, or just hit enter when in the last field. Try to write tests using different techniques to achieve the same goal, like submitting a form to make sure different ways work.
+
+Make sure browsers you are using are set to 100% zoom and your Operating System (OS) is not zooming past 100%. Internet Explorer is fickle in both of these. When writing your functional tests make sure both are set to 100%. If you need to change the OS zoom level, make sure to check the browsers are both set to 100% before trying to test. This can interfere with the ability of using a click method.
+
+With browsers, include only browsers which are installed or can run on the a particular Operation System. Internet Explorer should not in the default list of browsers to be tested, but instead it should be checked if the OS is Windows and then include Internet Explorer.
+
+Don't test against language unless it is something vital, this is because the default language could change or the content could change and then all the tests which relied on this need to be updated.
+
+Whenever possible, test against states of elements and not content. This is to help in case a class, or text has changed its name or is not longer included. Sometimes this can't be avoided though. An example of this would be if an unsuccessful form submission turns the button red, but doesn't change whether it is disabled. We would need to test to see if a failure class was added to the button. This can be annoying if the class changes names and thus tests will need to be updated, but in this case it would be unavoidable. Another way to test is would be to see if the message appears to tell the user the submission was a failure.
+
+
 {% include links.html %}
