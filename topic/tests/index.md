@@ -508,4 +508,24 @@ Sometimes a directive may call an internal function that performs specific actio
 With the above example, we could combine the data sets with this example to provide even shorter code, but it may be undesirable to do so.  For instance, with this code structure one can assert additional effects happened or mix in several `beforeEach()` calls.  Remember that the goal is maintainable, clean and self-describing code.
 
 
+Functional Testing
+------------------
+
+Functional testing is the art of testing how your website or API works from the eye of a user. Where functional tests differ, is instead of testing a piece of code, they test an entire flow. This could just be from simply logging in to a system to picking a product and simulating the flow all the way to purchase. There are some things which require a little bit of setup or frame of mind then with unit testing.
+
+First, we want to load the page, refresh the browser, or clear any data from memory each time a test is started. This is to make sure we don't carry over anything from one test to another since a browser or system could cache the data. For instance, if some data was set up in a browser `session`, we want to make sure it gets cleared before loading the next test. This can usually be done in an `afterEach()` call using `window.sessionStorage.clear();`.
+
+Try to think what a user would do. Running through the scenario you are setting up and pay attention to what you do. Forms can be a little touchy, as some people will click the button to submit the form, while others will tab to the submit button and hit enter, or just hit enter when in the last field. Try to write tests using different techniques to achieve the same goal, like submitting a form to make sure different ways work. For functional tests without a UI, you would still look at how a user would interact with the system and how they would get data and use it to move through the rest of the system.
+
+Do not test against written or spoken language unless it is something vital or there isn't another way to test, but there should always be another way without relying on content language. This is because the default language or the content could change and then all the tests which relied on this need to be updated. This also applies to API calls where one should be testing against a code, or some other item which would not change regularly.
+
+### Functional Testing of UIs Rendered In Browsers
+
+Whenever possible, test against states of elements and not content. This is to help in case a class or text has changed its name or is not longer included. Sometimes this can't be avoided though. An example of this would be if an unsuccessful form submission turns the button red, but doesn't change whether it is disabled. We would need to test to see if a failure class was added to the button. This can be annoying if the class changes names and thus tests will need to be updated, but in this case it would be unavoidable. Another way to test is would be to see if the message appears to tell the user the submission was a failure.
+
+With browsers, include only browsers which are installed or can run on the a particular Operation System (OS). Internet Explorer should not in the default list of browsers to be tested, but instead it should be checked if the OS is Windows and then include Internet Explorer.
+
+Make sure browsers you are using are set to 100% zoom and your OS is not zooming past 100%. Internet Explorer is fickle in both of these. When writing your functional tests make sure both are set to 100%. If you need to change the OS zoom level, make sure to check the browsers are both set to 100% before trying to test. This can interfere with the ability of using a click method.
+
+
 {% include links.html %}
