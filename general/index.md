@@ -80,7 +80,7 @@ Logical blocks will be offset by one blank line.  This is to call out that you a
         }
     }
 
-As shown in the above example, things like `return`, `exit`, and `throw` should be offset by a line as well.  They break typical program flow and the whitespace helps to call out that fact.
+To set functions off from other code, two blank lines will follow the function declaration.  Variable declarations will be offset from normal code by a blank line following the variable declaration.  Things like `return`, `exit`, and `throw` should have a blank line above them because they break typical program flow and the whitespace helps to call out that fact.
 
 
 Comments
@@ -99,7 +99,7 @@ Comments will be on the line before code.  Comments will be offset from any code
         return "this also has a blank line before it"
     }
 
-To set functions off from other code, two blank lines shall be used.  To set sections apart from each other in documentation, two blank lines will be used before headings.  Also, variable declarations and return statements should be offset from normal code by a blank line.
+To set sections apart from each other in documentation, two blank lines will be used before headings.
 
 Comments will be wrapped at 80 characters unless it is necessary to go over, such as when writing URLs.
 
