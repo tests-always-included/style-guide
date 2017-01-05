@@ -78,7 +78,31 @@ Do not collide with system names, such as naming a function `test` or `cat`.  Pr
 
 Filenames will use hyphens and all lowercase, such as `make-report`.  Omit using `.sh` or `.bash` at the end of the filename.  Libraries and scripts will be executable as necessary so tools like `ctags` will scan the file for functions.
 
-Function names will avoid hyphens in order to make them more portable.  Example:  `makeReport`.
+Function names will avoid hyphens in order to make them more portable.  Example:  `makeReport`.  If the script can be loaded as a library, the function names should be namespaced with the library's name and two colons; likewise, the main function should be named the same as the executable.
+
+    #!/usr/bin/env bash
+    # Sample library
+    
+
+    # Prints a greeting.
+    #
+    # Returns nothing.
+    sample::printHello() {
+        echo "Hello."
+    }
+
+   
+    # This is the "main" of our program.
+    sample() {
+        # Just call the function
+        sample::printHello
+    }
+
+
+    # Run if not sourced
+    if [[ "$0" == "${BASH_SOURCE[0]}" ]]; then
+        sample "$@"
+    fi
 
 Variable names will use camel case as well.  Use of uppercase names is restricted to system-wide variables and things you intentionally wish to export.  So, the function `makeReport` may use `sourceFile` and `destFile` as local variables.  Variables that are used that are not internal to the function will be in all caps, such as `DEBUG_INFO`.  When using an uppercase variable, prepend the variable to ensure it doesn't conflict with a reserved variable.
 
