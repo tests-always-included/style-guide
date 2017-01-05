@@ -1,7 +1,7 @@
 ---
 title: Style Guide for Python
 pageid: lang-py
-keywords: 0 120 2 4 6 80 a after an and are automatically available avoid bad base blocks by can changing checks class classes code come comprehension comprehensions config configure constructs contain contents creating default defining developers dictionary do doc double editing editor enforces exception extend files flake8 following for format functionality general globally good google's have hello im_smart in index install instead is it language length line list make makes max-line-length moving myclass new not object of ok only other override parameter pep8 person pip plugin predictable python quality quotes reason respect restructuredtext rules %s set so specific standard string style sure that the these they this to tool tooling unless use using version way we which with without x x**2 you your
+keywords: 0 120 2 6 80 a after an and are automatically available avoid base blocks by can changing checks class classes code come comprehension comprehensions config configure constructs contain contents creating default defining developers dictionary do doc double each editing editor ending enforces exception exist extend files flake8 following for format functionality general globally good google's have hello in index install instead is it its language length line lines list make makes match max-line-length moving must myclass my_func_with_lots_of_parameters new not note object of ok on only order original other outdent override own param1 param2 param3 param4 parameter parameters parenthesis part pep8 person pip plugin predictable put python quality quotes reason respect restructuredtext rules separate set so specific standard start string style sure that the these they this to tool tooling unless use using version way we what when which with without work wrapping you your
 ---
 
 These rules extend and override the [general rules][general-rules].
@@ -30,34 +30,29 @@ Specific Constructs
  
 Use [new style classes](https://www.python.org/doc/newstyle/).  They come with new functionality and it makes the code base predictable for other developers
 
-    # GOOD
+    # Note the "(object)" part. This is what makes it a new style class.
     class MyClass(object):
-
-    # BAD
-    class MyClass:
 
 Use [string.format](https://docs.python.org/2/library/stdtypes.html#str.format).  It is the way the language is moving.
 
-    # GOOD
     "Hello, {0}".format(person)
-
-    # BAD
-    "Hello, %s" % person
 
 Use double quotes (").
 
 Avoid [dictionary comprehension](https://www.python.org/dev/peps/pep-0274/).  It is not available in python 2.6.  [List comprehensions](https://docs.python.org/2/tutorial/datastructures.html#list-comprehensions) are ok.
 
-    # BAD
-    im_smart = {x: x**2 for x in (2, 4, 6)}
-
 Do not use [string.format](https://docs.python.org/2/library/stdtypes.html#str.format) without defining an index for a parameter.
 
-    # GOOD
+    # Note the "0". This must exist in order to work with python 2.6.6
     "Hello, {0}".format(person)
 
-    # BAD
-    "Hello, {}".format(person)
+When wrapping parameters on separate lines, put each parameter on its own line and outdent the ending parenthesis to match the start of the original line.
 
+    my_func_with_lots_of_parameters(
+        param1,
+        param2,
+        param3,
+        param4
+    )
 
 {% include links.html %}
