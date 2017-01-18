@@ -7,6 +7,14 @@ keywords: 1 2 3 80-character a above after all also an and another are as at att
 These rules extend and override the [general rules][general-rules].
 
 
+Tools
+-----
+
+You can use [checkref](https://github.com/addaleax/checkref) to verify your markdown links work.  However, you need to load all of your markdown files in order to verify a single file, otherwise it will report all files as missing.
+
+    checkref $(find -type f -name "*.md")
+
+
 Formatting
 ----------
 
