@@ -24,6 +24,8 @@ Angular directives, services, etc. have their type after the name (eg `some-dire
 
 Files closely associated with each other should be named similarly.  This way you can see that the files `response-template-service.js`, `response-template-service.css` and `response-template-service-declined.html` are all related.
 
+See [a suggested app structure here](suggested-app-structure.md).
+
 
 Variables, Naming and Capitalization
 ------------------------------------
