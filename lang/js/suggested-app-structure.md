@@ -1,7 +1,7 @@
 Suggested App Structure
 =======================
 
-The below is an example application structure. This application uses HTTP as a communication layer but it would work equally well with other communication types.
+Below is an example application structure. This example uses HTTP as a communication layer but it would work equally well with other communication types.
 
 	├── bin
 	├── doc
@@ -11,7 +11,7 @@ The below is an example application structure. This application uses HTTP as a c
 	├── lib
 	└── spec
 
-* `bin` - Executable files. These deal with a command line interface as the communication layer. If the executable must use something in another communication layer (for example starting a server for HTTP) add as little from that layer as possible.
+* `bin` - Executable files. These deal with a Command Line Interface (CLI) as the communication layer. If the executable must use something in another communication layer (for example starting a server for HTTP) add as little from that layer as possible.
 * `doc` - All documentation should be under this folder with the exception of a `README.md` which can exist at the root of the project.
 * `http` - Everything having to do specifically with HTTP should go under this folder. That includes anything that uses the request, the response or the session.
     * `lib` - The core functionality for dealiing with HTTP. In theory, modules here could be reused with other HTTP interfaces.
