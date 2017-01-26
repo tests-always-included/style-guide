@@ -60,6 +60,10 @@ entries:
                     url: /lang/sh/
                     output: web, pdf
                 -
+                    title: SQL
+                    url: /lang/sql/
+                    output: web, pdf
+                -
                     title: YAML
                     url: /lang/yaml/
                     output: web, pdf

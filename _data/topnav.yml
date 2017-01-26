@@ -41,6 +41,9 @@ topnav_dropdowns:
                         title: Shell Scripts
                         url: /lang/sh/
                     -
+                        title: SQL
+                        url: /lang/sql/
+                    -
                         title: YAML
                         url: /lang/yaml/
             -
