@@ -6,9 +6,11 @@ env:
     jasmine: true
 extends:
     - angular
+    - plugin:protractor/recommended
     - eslint:recommended
 plugins:
     - jasmine
+    - protractor
 globals:
     inject: true
     module: true
@@ -256,3 +258,9 @@ rules:
         - block
     jasmine/valid-expect:
         - error
+    protractor/no-describe-selectors:
+        - off
+    protractor/no-repetitive-selectors:
+        - off
+    protractor/no-repetitive-locators:
+        - off
