@@ -96,9 +96,9 @@ ESLint forces `case` statements and the `default` case in switches to be un-inde
 
 In general, chained function calls should be on a single line. This intentionally looks ugly so you write code that's more debuggable. Rare exceptions can be made for certain libraries that were designed specifically to be used by chaining many function calls together.
 
-No other newlines.
-
 Property names shall be followed immediately by a colon, a space, and the property's value.
+
+In reference to all other newlines, we encourage limiting them to the cases enumerated in this guide but it is not compulsory. The primary objective of this is to encourage developers to write readable and debuggable code. Due to this objective, we recommend newlines are used in a consistent and logical manner.
 
 
 ES6, ES5
