@@ -21,7 +21,7 @@ makeWordList() {
     local patt
 
     patt="[-_,\"\`:;()'\\\$?*#\!@]*"
-    tr "A-Z \t\"()<>{}/=." "a-z\n" | sed -e "s/^$patt\\|$patt\$//g" | sort | uniq
+    tr "A-Z \t\"()<>{}/=.[];,:\`*" "a-z\n" | sed -e "s/^$patt\\|$patt\$//g" | sort | uniq
 }
 
 # Removes link definitions in Markdown
@@ -51,7 +51,7 @@ updateKeywords() {
 
     if [[ ! -f "$1" ]]; then
         echo "File does not exist: $1" >&2
-        
+
         return
     fi
 
@@ -70,7 +70,7 @@ updateKeywords() {
 
     if [[ -z "$body" ]]; then
         echo "Missing body: $1" >&2
-        
+
         return
     fi
 
