@@ -257,6 +257,7 @@ Resolving Promises
 
 Having promises inside controllers is a good thing, but we don't want to have them in routes, as controllers and their functionality will be defined in static HTML or within a directive.
 
+
 ### Route Resolve Promises
 
 This is unnecessary, since the controller should be only included in the directive or element. This again keeps the code clean and functionality contained in the module.
